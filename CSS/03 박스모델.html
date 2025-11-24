@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 박스모델(p191)</title>
+  <style>
+    #box{
+      width:200px; height:100px; /*content영역의 크기조절*/
+      border:20px solid #000;
+      padding-top:20px; /*내부여백*/
+      margin-top:-50px;
+    }
+  </style>
+</head>
+<body>
+  <h1>태그의 구조</h1>
+  <div id="box">태그안</div>
+  <!--
+    1) content영역 : 태그안, 내용을 작성하는 곳(텍스트, 또 다른 태그)
+      - width와 height 에 의해 크기조절됨. 
+
+    2) padding영역 : 내부여백
+      - 영역을 확장시키는 특징이 있다.
+      - background만 표현됨.
+
+    3) border영역 - 테두리
+
+    4) margin영역 : 외부여백
+      - 마이너스값을 사용가능 -> 상대적 위치로 해석
+      - black레벨의 요소들은 margin영역이 겹친다.  
+  -->
+</body>
+</html>

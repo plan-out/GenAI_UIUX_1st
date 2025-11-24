@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>04 테두리와 여백</title>
+  <style>
+    #b{
+      width:200px; height:100px;
+
+      /*속성별로 작성*/
+      border-width:10px; /*선두께*/
+      border-style:solid;  /*선모양(p203)*/
+      border-color:red; /*선색상*/
+
+      /*축약(단축)작성*/
+      border:10px solid red;
+
+      /*위치별로 작성*/
+      border-top:20px solid green;
+      border-left:5px dashed blue;
+
+      /*위치-속성별 작성*/
+      border-right-style:double;
+      border-bottom-color:yellow;
+    }
+
+    .box{
+      width:200px; height:100px;
+      border:10px solid #000;
+    }    
+    .this{
+      border-color:red;
+      /* border-style:dashed; */
+      background:pink;
+      background-clip:content-box;
+
+      padding:20px; /*4방향*/
+      padding:20px 40px; /*위아래 좌우*/
+      padding:20px 40px 60px; /*위 좌우 아래*/
+      padding:20px 40px 60px 80px; /*시계방향*/
+
+      margin-top:40px;
+      margin-left:10px;
+      margin-right:0;
+      margin-bottom:20px;
+    }
+
+    .last{
+      background:#cfc;
+      /*모서리 둥글게(p203)*/
+      border-radius:20px;
+      border-bottom-right-radius:40px;
+
+      /*외곽선(p210)*/
+      outline:10px solid #00f;
+      /*
+        특징
+        1) border영역 바깥으로 생성됨.
+        2) 크기에 영향을 주지않음.
+        3) 위치별 분할안됨.
+      */
+    } 
+  </style>   
+</head>
+<body>
+  <div id="b">테두리설정(p201)</div>
+  <div class="box"></div>
+  <div class="box this"></div>
+  <div class="box last"></div>
+  
+</body>
+</html>

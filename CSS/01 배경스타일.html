@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>01 배경스타일</title>
+    <style>
+        body{
+            height:100vh;
+            background-color:#e7e77b;   /*배경색상*/
+            background-image:url("./고양이.jpg");   /*배경이미지*/
+            background-repeat:no-repeat; /*반복여부(p167)*/
+            background-position:center center;  /*배경위치:수평위치 수직위치*/
+            background-attachment:fixed;   /*배치방법(p172)*/
+
+            background-size:cover;   /*배경이미지 크기(p175)*/
+            /*
+                background-origin, background-clip 교재 참고
+            */
+            /*
+            축약작성
+            background:url("주소") 반복여부 수평위치 수직위치/너비 높이 배치 색상;
+            */
+            background:url("./고양이.jpg") no-repeat center top fixed #fcc;
+            background-size:50% auto;/*되도록 따로 작성하는 걸 추천함.*/
+
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

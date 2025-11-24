@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>07 블록요소의 수평정렬</title>
+  <style>
+    div{border:10px solid #f00;}
+    p{width:100px; height:100px;
+      border:5px solid #000;
+      background:#ccc;
+      margin:0;}
+
+    p:first-child{background:#fcc;}  
+    p:last-child{background:#ccf;}  
+
+    #box1{text-align:center;}
+    #box1 p{display:inline;}
+
+    #box2{text-align:right;
+      font-size:0;}/*공백의 크기를 줄임*/
+    #box2 p{display:inline-block;}
+
+    #box3 p:nth-child(1){float:left;}
+    #box3 p:nth-child(2){float:left;}
+    #box3 p:nth-child(3){float:left;
+      clear:both;}
+    #box3 p:nth-child(4){float:left;}
+  </style>
+</head>
+
+<body>
+  <h1>블록요소의 수평정렬</h1>
+  <hr>
+  <div id="box1">
+    <p>box1_1</p><p>box1_2</p><br>
+    <p>box1_3</p><p>box1_4</p>
+  </div>
+  <hr>
+  <div id="box2">
+    <p>box2_1</p>
+    <p>box2_2</p><br>
+    <p>box2_3</p>
+    <p>box2_4</p>
+  </div>
+  <hr>
+  <div id="box3">
+    <p>box3_1</p>
+    <p>box3_2</p>
+    <p>box3_3</p>
+    <p>box3_4</p>
+  </div>
+</body>
+
+</html>

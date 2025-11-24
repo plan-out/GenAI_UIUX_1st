@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>06 요소의 유형</title>
+  <style>
+    .tag{
+      border:1px solid #00f;
+      width:200px; height:100px;
+      margin:0;
+    }
+    .block{display:none;}/*진열되지 않음.*/
+
+    .inline{display:inline-block;}
+  </style>
+</head>
+<body>
+
+  <div class="block tag">영역태그</div>
+  <h1 class="block tag">제목태그</h1>
+  <p class="block tag">문단태그</p>
+
+  <span class="inline tag">
+    인라인영역태그
+    <h2>h2제목태그</h2>
+  </span>
+  <a class="inline tag">링크태그</a>
+  <strong class="inline tag">강조태그</strong>
+
+</body>
+</html>
