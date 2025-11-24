@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>08 float사용하기</title>
+  <style>
+    #box1,#box2,#box3{
+      width:100px; height:100px; 
+      background:#ccc;
+      border:1px solid #f00; 
+      float:left;
+      margin:10px;
+    }
+    #parent{
+      border:10px solid #000;
+      background:#ffc;
+      clear:both;
+      overflow:hidden;
+    }
+    span{
+      border:3px solid #0f0;
+      display:inline-block;
+    }
+
+    #parent div{
+      width:80px; height:80px;
+      float:left;
+    }
+    .child:nth-child(2){background:#f00;}
+    .child:nth-child(3){background:#0f0;}
+    .child:nth-child(4){background:#00f;}
+
+    p{background:yellow; margin:0;
+      clear:both;}
+  </style>
+</head>
+<body>
+  <div id="box1">box1</div>
+  <div id="box2">box2</div>
+  <div id="box3">box3</div>
+  
+  <div id="parent">
+    <span>다음에 오는 영역</span>
+    <div class="child"></div>
+    <div class="child"></div>
+    <div class="child"></div>
+    <!--<p>p</p>-->
+  </div>
+
+</body>
+</html>
