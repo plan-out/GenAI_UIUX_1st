@@ -1,0 +1,21 @@
+■ 태그의 유형(p29)
+1.블럭요소 : 사이트의 구조를 만들 때 사용됨.
+  h1~h6, div, p, ul, ol, li, dl, dt, dd, (hr, br)
+  header, main, footer, nav, aside, section, article,
+  address, form, fieldset,  ...
+  (1)수직정렬  (2)크기조절이 가능함.
+  (3)기본크기:너비는 부모의 컨텐츠영역과 같고, 높이는 내용만큼 설정된다.
+
+2.인라인요소 : 텍스트나 내용을 감싸는 태그.
+  a, span, strong, em, i, b, label, legend,
+  (small, del, ins, sup, sub, mark) ...
+  (1)수평정렬  (2)크기조절이 불가능함.
+  (3)기본크기:너비는 내용만큼, 높이는 글자크기(font-size)만큼 설정된다.
+  (4)공백(띄어쓰기)을 인식함.  (5)블록요소를 감쌀 수 없다.
+
+3.인라인-블록요소 : 컨텐츠에 해당되는 태그(텍스트와 같은 취급)
+  img, iframe, video, input, button, textarea, ...
+  (1)수평정렬  (2)크기조절이 가능함.
+  (3)기본크기:너비높이 둘다 내용만큼, 최소높이는 행높이(line-height)에
+            맞추어진다.
+  (4)공백(띄어쓰기)을 인식함.  (5)블록요소를 감쌀 수 있다.
