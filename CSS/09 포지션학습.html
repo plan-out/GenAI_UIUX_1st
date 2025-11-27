@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>09 포지션학습</title>
+  <style>
+    body{height:3000px;}
+    div{width:200px; height:80px;
+      border:1px solid #000;
+      background:#999; color:#fff;
+      font-size:24px; 
+      text-transform:uppercase;}
+
+    .b{background:#f00;
+      position:fixed;/*화면기준*/
+      top:30px; left:30px;
+      z-index:-2;} 
+
+    .d{background:#0f0;
+      position:absolute;
+      top:60px; left:60px;
+      z-index:1;} 
+
+    .f{background:#00f;
+      position:absolute;
+      top:90px; left:90px;}  
+
+    .h{background:#ff0;
+      position:relative;
+      top:30px; left:30px;}  
+
+    .j{background:#0ff;
+      position:sticky;
+      left:60px; top:60px;}  
+  </style>
+</head>
+<body>
+  <div class="a">a</div>
+  <div class="b">b(fixed)</div>
+  <div class="c">c</div>
+  <div class="d">d(absolute)</div>
+  <div class="e">e</div>
+  <div class="f">f(absolute)</div>
+  <div class="g">g</div>
+  <div class="h">h(relative)</div>
+  <div class="i">i</div>
+  <div class="j">j(sticky)</div>
+  <div class="k">k</div>
+</body>
+</html>

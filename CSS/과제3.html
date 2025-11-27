@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>과제3</title>
+  <style>
+    #grand{background:#ffc;
+      border:10px solid #000;
+      overflow:hidden; width:900px;}
+
+    #grand > div{width:300px; 
+      height:300px; margin:40px;}
+    .red{background:#fcc;
+      border:10px solid #f00;
+      float:left;}
+    .green{background:#cfc;
+      border:10px solid #0f0;
+      float:right;}
+
+    #grand > div > div{width:100px;
+      height:100px;}
+    #grand > div > div:nth-child(1){background:#00f;}  
+    #grand > div > div:nth-child(2){background:#33f;}  
+    #grand > div > div:nth-child(3){background:#66f;}  
+    #grand > div > div:nth-child(4){background:#99f;}  
+    #grand > div > div:nth-child(5){background:#bbf;}  
+
+    .red div{float:left;}
+    .green div{float:right;}
+
+    .red div:nth-child(4),
+    .red div:nth-child(5),
+    .green div:nth-child(2),
+    .green div:nth-child(3){clear:both;}
+
+  </style>
+</head>
+<body>
+  <div id="grand">
+    <div class="red">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <div class="green">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </div>
+</body>
+</html>
