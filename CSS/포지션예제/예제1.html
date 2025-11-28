@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포지션 예제1</title>
+  <style>
+    *{margin:0; padding:0; font-size:0;}
+
+    body{
+      background:#ffc url("./img1/chicken.png") no-repeat right top;
+    }
+    #face{width:331px; height:283px;
+      background:url("./img1/face.png") no-repeat;
+      border:1px solid #000;
+      position:absolute; top:50%; left:50%;
+      margin-left:-165.5px;
+      margin-top:-141.5px;
+      transition:all .4s;
+    }
+    #face p{position:absolute;
+      transition:all .4s;}
+    .hair{top:-130px; left:90px;}
+    .eye{top:135px; left:94px;}
+    .flush{top:173px; left:78px;}
+    .beak{top:146px; left:129px; z-index:1;}
+    .poc{top:177px; left:147px;}
+
+    /*변형transform (p218)*/
+    #face:hover .beak{
+      /*이동*/
+      transform:translateY(20px);
+      /*
+        translate(수평,수직) : 이동
+        translateX(값) : 수평이동
+        translateY(값) : 수직이동
+      */
+    }
+
+    #face:hover .flush{
+      /*크기조절*/
+      transform:scale(2,0.5);
+      /*
+        scale(너비비, 높이비);
+        scaleX() 너비비율 
+        scaleY() 높이비율
+      */
+    }
+
+
+    #face:hover .hair{
+      /*기울리기*/
+      transform:skewX(-30deg);
+      /*
+        skew(각도,각도) : 수평축 수직축
+        skewX(각도) : 수평축 기울리기
+        skewY(각도) : 수직축 기울리기
+      */
+    }
+
+    .poc{
+      /*변형의 기점(기준점) 변경*/
+      transform-origin:center 0%;
+    }
+
+    #face:hover .poc{
+      /*회전_3차원회전*/
+      transform:rotateY(360deg);
+      /*
+        rotate(각도) : 2차원 회전
+        rotateX(각도) : 3차원 X축 회전
+        rotateY(각도) : 3차원 Y축 회전
+        rotateZ(각도) : 3차원 Z축 회전
+      */
+    }
+
+    /*
+    #face:hover{
+      transform:scaleX(2) rotate(90deg);
+    }
+    */
+    strong{
+      font-size:30px; padding:10px 20px;
+      display:inline-block;
+      background:red; color:white;
+      /*transition:서서히 속성변화(동적변화)*/
+      transition-property:all;/*적용속성(all:모든속성)*/
+      transition-duration:2s;/*전환시간*/
+      transition-timing-function:ease;/*속도*/
+      /* arof.kr/속도비교.html */
+      transition-delay:1s;/*대기시간*/
+
+      /*축약작성*/
+      transition:all 2s ease 1s;
+    }
+
+    strong:hover{
+      background:green;
+      padding:40px;
+    }
+  </style>
+</head>
+<body>
+  <div id="face">
+    <p class="hair"><img src="./img1/hair.png" alt=""></p>
+    <p class="eye"><img src="./img1/eye.png" alt=""></p>
+    <p class="flush"><img src="./img1/flush.png" alt=""></p>
+    <p class="beak"><img src="./img1/beak.png" alt=""></p>
+    <p class="poc"><img src="./img1/poc.png" alt=""></p>
+  </div>
+  <strong>트랜지션(p221)</strong>
+</body>
+</html>

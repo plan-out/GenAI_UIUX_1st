@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>포지션 예제2</title>
+  <style>
+    *{margin:0; padding:0; font-size:0;}
+    body{
+      background:#dfd url("./img2/dog.png") no-repeat right top;
+    }
+
+    #face{
+      width:554px; height:462px;
+      background:url("./img2/face.png") no-repeat;
+      position:absolute;
+      top:50%; left:50%;
+      margin:-231px 0 0 -277px;
+      border:1px solid #000;
+    }
+    #face p{position:absolute;}
+    .ear_l{top:-95px; left:25px; z-index:-1;}
+    .ear_r{top:-95px; right:25px; z-index:-1;}
+    .jaw{bottom:0; left:9px;}
+    .eye_l{top:230px; left:125px;}
+    .eye_r{top:230px; right:125px;}
+    .flush_l{top:275px; left:120px;}
+    .flush_r{top:275px; right:120px;}
+    .nose{top:230px; left:240px;}
+    .mouth{top:260px; left:244px;}
+    .shadow{bottom:0; right:0;}
+  </style>
+</head>
+<body>
+  <div id="face">
+    <p class="ear_l"><img src="./img2/ear_left_out.png" alt=""></p>
+    <p class="ear_r"><img src="./img2/ear_right_out.png" alt=""></p>
+    <p class="jaw"><img src="./img2/jaw.png" alt=""></p>
+    <p class="eye_l"><img src="./img2/eye_left.png" alt=""></p>
+    <p class="eye_r"><img src="./img2/eye_right.png" alt=""></p>
+    <p class="flush_l"><img src="./img2/flush_left.png" alt=""></p>
+    <p class="flush_r"><img src="./img2/flush_right.png" alt=""></p>
+    <p class="mouth"><img src="./img2/mouth.png" alt=""></p>
+    <p class="nose"><img src="./img2/nose.png" alt=""></p>
+    <p class="shadow"><img src="./img2/shadow.png" alt=""></p>
+  </div>
+</body>
+</html>
