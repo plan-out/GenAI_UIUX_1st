@@ -3,7 +3,8 @@
 /*리셋코드:태그가 가지는 기본값을 0 또는 none 으로 설정*/
 *{margin:0; padding:0;}
 li{list-style:none;}
-img{vertical-align:top;}
+/*인라인블럭요소 모두에게 적용할 것*/
+img,iframe{vertical-align:top;}
 
 
 header{
@@ -27,9 +28,34 @@ header #gnb{float:right; font-size:0;}
 header #gnb li{display:inline-block;}
 
 
+main{width:1200px; margin:20px auto 0;}
+main section{}
 
+.box1{display:flex; margin:60px 0 45px; 
+  justify-content:space-evenly;}
+.box1 h2{margin-bottom:20px;}
+.box1 #info{align-self:flex-end;}
 
-main{border:3px solid #000; display:none;}
+#event_list{
+  height:450px;
+  background:url("./images/event_wide_bg.jpg") no-repeat center;
+  background-size:cover;/*비율유지한 채, 최소한 사이즈로 영역을 채움*/
+  font-family:"나눔고딕", "맑은 고딕", "돋움";
+  text-align:center;
+}
+#event_list h2{font-size:35px; padding:40px 0;}
+#event_list ul{display:flex;}
+#event_list li{width:18%; margin:0 1%; font-size:20px;
+  font-weight:bold;}
+#event_list img{width:100%; border-radius:50%; margin-bottom:20px;}
+
+.box2{
+  margin:60px 0 65px; display:flex; justify-content:space-between;}
+.box2 h2{margin-bottom:20px;}
+
+#host h2{text-align:center; margin-bottom: 40px;} 
+#host ul{display:flex; justify-content:space-evenly;}
+
 
 
 footer{border:3px solid #000; display:none;}
