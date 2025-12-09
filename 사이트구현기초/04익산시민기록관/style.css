@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/*리셋코드*/
+*{margin:0; padding:0;}
+li{list-style:none;}
+img{vertical-align:center;}
+a{text-decoration:none;}
+
+/*최상위요소 */
+:root{
+  font-family:"Pretendard GOV Variable";
+  /*변수등록*/
+  --main:#0e7876;
+}
+
+header{width:1400px; margin:0 auto; border:5px solid #000;}
+header #link{border-bottom:1px solid #efefef;}
+header #link ul{display:flex; justify-content:flex-end;}
+header #link a{font-size:14px; color:#757575;
+  padding:0 10px; height:30px; line-height:30px;
+  display:block; text-decoration:none;}
+header #link a:hover{text-decoration:underline;}  
+
+header .inner{height:150px; display:flex;
+  justify-content:space-between; align-items:center;}
+header #gnb > ul{display:flex; gap:16px;}  
+header #gnb li{position:relative;}
+header #gnb .menu{font-size:22px; color:#333; font-weight:bold;
+  letter-spacing:-1px; display:block; padding:20px;
+  position:relative;}
+header #gnb .menu:hover{color:var(--main);}  
+header #gnb .menu::before{content:""; position:absolute;
+  width:6px; height:6px; background:var(--main);
+  border-radius:50%; top:18px; left:50%; margin-left:-3px;
+  opacity:0; transition:all .2s;}
+header #gnb .menu:hover::before{opacity:1; top:8px;}
+
+header #gnb li .sub{position:absolute; top:65px; left:0;
+  border:1px solid var(--main); background:#fff; 
+  border-radius:16px; padding:30px 20px; width:250px;
+  box-sizing:border-box;/*border영역까지 크기조절됨*/
+  box-shadow:0 0 24px #0003; /*그림자효과
+    box-shadow:수평위치 수직위치 [블러] [크기] 색상 [inset];*/
+  opacity:0; visibility:hidden;}
+header #gnb li:hover .sub{opacity:1; top:60px; visibility:visible;
+  transition:all .3s; }
+header #gnb li:nth-child(3) .sub{left:-10px;}
+header #gnb li:nth-child(4) .sub{left:-86px;}
+header #gnb li:nth-child(5) .sub{left:-66px;}
+
+header #gnb li .sub a{font-size:18px; line-height:30px;
+  color:#333; font-weight:bold; padding-left:25px;}
+header #gnb li .sub a:hover{color:var(--main);}  
+header #gnb li .sub a:hover::before{content:""; width:6px; height:6px;
+  background:var(--main); border-radius:50%; position:absolute;
+  top:11px; left:6px; }  
+
+header #user ul{display:flex; gap:15px;}
+
+
+main{width:1400px; margin:0 auto;
+  border:5px solid #000;}
+
+#search{margin:60px 0; border:1px solid var(--main);
+  padding:5px 20px 5px 30px; border-radius:16px;
+  box-shadow:0 0 16px #0001;}
+#search p{display:flex;}
+#search input{font-size:18px; height:60px; color:#333;
+  border:0; flex-grow:1;}
+#search button{width:50px; border:0; font-size:0;
+  background:url("./images/ico-archive-search.png") no-repeat center;}
+
+#statics{padding:20px; background:#ebf4f1; border-radius:16px;}
+#statics dl{display:flex; justify-content:space-between;}
+#statics dd img{border-radius:50%;}
+#statics dd img:hover{box-shadow:0 13px 17.8px 2.2px #0003; }
